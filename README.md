@@ -1,4 +1,4 @@
-# calculator
+# Calculator
 
 Building a Ruby calculator
 
