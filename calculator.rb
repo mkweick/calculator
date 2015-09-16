@@ -15,6 +15,7 @@ begin
   # Get user Math statement 
   user_array = gets.chomp.split
 
+  # Check to make sure statement has valid operator
   while !user_array.any? { |symbol| ["+", "-", "*", "/", "**"].include?(symbol) }
     puts "You have not entered a valid math operator."
     puts "Please ensure you have a space before and after operator."
@@ -34,6 +35,7 @@ begin
   operator      = user_array[1]
   second_number = user_array[2].to_i
 
+  # Execute correct math operation based on operator
   case operator
   when "+"
     puts "Result: #{first_number + second_number}"
