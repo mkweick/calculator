@@ -1,12 +1,12 @@
 puts "Ruby Calculator"
-puts "\n"
+puts
 puts "----- addition       (+)"
 puts "----- subtraction    (-)"
 puts "----- multiplication (*)"
 puts "----- division       (/)"
 puts "----- squared        (**)"
 puts "** Must have a space before and after operator"
-puts "\n"
+puts
 puts "Example format: 10 * 2  --or--  5 + 10"
 
 begin
@@ -16,17 +16,17 @@ begin
   user_array = gets.chomp.split
 
   # Check to make sure statement has valid operator
-  while !user_array.any? { |symbol| ["+", "-", "*", "/", "**"].include?(symbol) }
+  while user_array.none? { |symbol| ["+", "-", "*", "/", "**"].include?(symbol) }
     puts "You have not entered a valid math operator."
     puts "Please ensure you have a space before and after operator."
     puts "Valid operators are:"
-    puts "\n"
+    puts
     puts "-->  +   addition"
     puts "-->  -   subtraction"
     puts "-->  *   multiplication"
     puts "-->  /   division"
     puts "-->  **  squared"
-    puts "\n"
+    puts
     puts "Try again:"
     user_array = gets.chomp.split
   end
